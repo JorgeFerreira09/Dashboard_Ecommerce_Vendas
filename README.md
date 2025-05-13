@@ -45,7 +45,8 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 
 ### V. Passo a Passo
 
-1º) 
+1º) Importação das bibliotecas sqlite3 e panda, bem como duas bases de dados são carregadas a partir de arquivos CSV. 
+
 ```
 import sqlite3
 import pandas as pd
@@ -60,3 +61,149 @@ df_clientes.to_sql('TB_CLIENTES', conn, index=False, if_exists='replace')
 def run_query(query):
     return pd.read_sql_query(query, conn)
 ```
+
+
+2º Conhecendo a Tabela Transação com SQL, apenas 5 linhas.
+```
+query = "SELECT * FROM TB_TRANSACOES LIMIT 5"
+result_df = run_query(query)
+print(result_df)
+```
+```
+   id_client     Category   Price   Card Type
+0         37  Electronics   72,93  mastercard
+1         38      Jewelry  121,89  mastercard
+2         39         Baby    64,3  mastercard
+3         40     Outdoors    9,48  mastercard
+4          5     Outdoors   61,95  mastercard
+```
+
+
+3º 
+Conhecendo a Tabela Clientes com SQL, apenas 10 linhas. 
+```
+query = "SELECT * FROM TB_CLIENTES LIMIT 10"
+result_df = run_query(query)
+print(result_df)
+```
+```
+  state_name First_name  Gender                     Job_Title  Id_client
+0         TX    Domingo    Male  Structural Analysis Engineer          1
+1         MI    Russell    Male            Speech Pathologist          2
+2         AL     Kimble    Male           Account Coordinator          3
+3         IL   Barnabas    Male               General Manager          4
+4         MN     Tanney  Female                  VP Marketing          5
+5         VA     Launce    Male       Automation Specialist I          6
+6         CO      Adham    Male               Project Manager          7
+7         TX      Dante    Male           Geological Engineer          8
+8         PA         Hi  Female        Senior Cost Accountant          9
+9         CA    Carmine  Female               Statistician II         10
+```
+
+
+4º 
+Uso do comando INNER JOIN do SQL para retornar apenas as linhas que têm correspondência em ambas as tabelas. 
+```
+query = """
+SELECT
+*
+FROM TB_TRANSACOES
+INNER JOIN TB_CLIENTES
+ON TB_TRANSACOES.Id_client = TB_CLIENTES.Id_client
+ORDER BY TB_TRANSACOES.Id_client
+"""
+result_df = run_query(query)
+print(result_df)
+```
+
+```
+     id_client    Category   Price   Card Type state_name First_name   Gender  \
+0            1    Outdoors   16,97  mastercard         TX    Domingo     Male   
+1            2     Grocery  143,39  mastercard         MI    Russell     Male   
+2            3       Music   37,64  mastercard         AL     Kimble     Male   
+3            4     Jewelry    8,51  mastercard         IL   Barnabas     Male   
+4            5    Outdoors   61,95  mastercard         MN     Tanney   Female   
+..         ...         ...     ...         ...        ...        ...      ...   
+291        171       Books   35,85  mastercard         UT  Fairleigh     Male   
+292        172  Automotive  130,08  mastercard         DC    Lambert  Agender   
+293        173        Kids   28,38  mastercard         NY      Jacob     Male   
+294        174      Sports   36,35  mastercard         OK        Pip     Male   
+295        175        Kids  141,71  mastercard         OR     Murvyn   Female   
+
+                        Job_Title  Id_client  
+0    Structural Analysis Engineer          1  
+1              Speech Pathologist          2  
+2             Account Coordinator          3  
+3                 General Manager          4  
+4                    VP Marketing          5  
+..                            ...        ...  
+291    Desktop Support Technician        171  
+292             Chemical Engineer        172  
+293      Senior Financial Analyst        173  
+294         Chief Design Engineer        174  
+295          Safety Technician IV        175  
+
+[296 rows x 9 columns]
+```
+
+
+5º) **Limpeza de Dados**
+Realização de limpeza de dados com Pandas, antes de exportar para o formato CSV e trabalhar no Power BI.
+
+
+```
+result_df['Price'] = result_df['Price'].replace(',', '.', regex=True)
+result_df['Price'] = result_df['Price'].astype(float)
+result_df.drop('Id_client', axis=1, inplace=True)
+result_df.columns = result_df.columns.str.lower()
+result_df.rename(columns={'card type': 'card_type'}, inplace=True)
+
+print(result_df)
+
+#print(result_df.isnull().sum())                   # verificar a existencia de valores nulos no df.
+#print(result_df.dtypes)                           # verificar a existencia de tipos de dados no df.
+#print(result_df.applymap(type).nunique() == 1)    # Verificar a existência de um só tipo de dado em cada coluna do df.
+```
+
+
+```
+     id_client    category   price   card_type state_name first_name   gender  \
+0            1    Outdoors   16.97  mastercard         TX    Domingo     Male   
+1            2     Grocery  143.39  mastercard         MI    Russell     Male   
+2            3       Music   37.64  mastercard         AL     Kimble     Male   
+3            4     Jewelry    8.51  mastercard         IL   Barnabas     Male   
+4            5    Outdoors   61.95  mastercard         MN     Tanney   Female   
+..         ...         ...     ...         ...        ...        ...      ...   
+291        171       Books   35.85  mastercard         UT  Fairleigh     Male   
+292        172  Automotive  130.08  mastercard         DC    Lambert  Agender   
+293        173        Kids   28.38  mastercard         NY      Jacob     Male   
+294        174      Sports   36.35  mastercard         OK        Pip     Male   
+295        175        Kids  141.71  mastercard         OR     Murvyn   Female   
+
+                        job_title  
+0    Structural Analysis Engineer  
+1              Speech Pathologist  
+2             Account Coordinator  
+3                 General Manager  
+4                    VP Marketing  
+..                            ...  
+291    Desktop Support Technician  
+292             Chemical Engineer  
+293      Senior Financial Analyst  
+294         Chief Design Engineer  
+295          Safety Technician IV  
+
+[296 rows x 8 columns]
+```
+
+6º)
+Exportar os dados para o formato CSV com objetivo de trabalhar no Power BI
+
+```
+result_df.to_csv('BASE_ECOMMERCE.csv', index=False)
+```
+
+
+```
+```
+
