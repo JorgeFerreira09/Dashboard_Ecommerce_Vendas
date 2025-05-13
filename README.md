@@ -46,3 +46,17 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 ### V. Passo a Passo
 
 1º) 
+```
+import sqlite3
+import pandas as pd
+
+df_transacoes = pd.read_csv("TB_TRANSACOES.csv", delimiter=';')
+df_clientes = pd.read_csv("TB_CLIENTES.csv", delimiter=';')
+
+conn = sqlite3.connect('projeto.db')
+df_transacoes.to_sql('TB_TRANSACOES', conn, index=False, if_exists='replace')
+df_clientes.to_sql('TB_CLIENTES', conn, index=False, if_exists='replace')
+
+def run_query(query):
+    return pd.read_sql_query(query, conn)
+```
