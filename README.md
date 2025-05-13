@@ -2,6 +2,7 @@
   <h1> Dashboard E-commerce: Desempenho de Vendas </h1>
 </div> <br>  
 
+Estruturação do Projeto: <br>
 🟣 Objetivo <br>
 🟣 Apresentação visual <br>
 🟣 Insights para tomador de decisão<br>
@@ -11,7 +12,7 @@
 
 ### I. Objetivo  
      
-Analisar o desempenho de vendas de um e-commerce por categoria de produto e perfil demográfico, considerando estado, gênero e profissão. </p>
+Analisar o desempenho de vendas de uma grande loja virtual por categoria de produto e perfil demográfico, considerando estado, gênero e profissão. </p>
    
 ### II. Apresentação Visual
   
@@ -27,7 +28,7 @@ Analisar o desempenho de vendas de um e-commerce por categoria de produto e perf
 
 <br>
 
-___✔️ As mulheres compraram 5x mais produtos da categoria “sports” que os homens. A categoria pode incluir mais itens com forte apelo feminino, por exemplo, roupas de academia como legging ou tops de treino. É preciso verificar quais produtos a compõem.___ <br><br>
+___✔️ As mulheres compraram 5x mais produtos da categoria “sports” que os homens. A categoria pode incluir mais itens com forte apelo feminino, por exemplo, roupas de academia como legging ou tops de treino. É preciso verificar quais produtos a compõem tem realmente esse apelo.___ <br><br>
 
 ___✔️  As vendas estão concentradas no público feminino (45%) e masculino (42%) no geral. Cada um dos demais gêneros - Genderfluid, Agender, Genderqueer, Non-binary, Poly Gender, Bi Gender - representa menos de 5% das vendas. Isso pode indicar que as ações de marketing não estão se comunicando de forma efetiva com esses públicos. Tornar a comunicação mais inclusiva pode ser uma solução.___ <br><br>
 
