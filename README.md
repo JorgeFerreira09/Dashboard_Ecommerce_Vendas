@@ -45,9 +45,11 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 
 ### V. Passo a Passo
 
-🟪 **Análise Exploratória dos dados**
+<br>
 
-___1º) Importação das bibliotecas sqlite3 e pandas e carregamento das duas bases de dados a partir de arquivos CSV.___<br>
+🟪 **Análise Exploratória dos dados** <br>
+
+___1º Importação das bibliotecas sqlite3 e pandas e carregamento das duas bases de dados a partir de arquivos CSV.___<br>
 
 ```
 import sqlite3
@@ -149,11 +151,11 @@ print(result_df)
 [296 rows x 9 columns]
 ```
 
-<br>
+<br><br>
 
-🟪 **Limpeza de Dados** 
+🟪 **Limpeza de Dados** <br>
 
-___Realização da limpeza de dados com Pandas, antes de exportar para o formato CSV.___<br>
+___Limpeza com Pandas antes de exportar para o formato CSV.___<br>
 ```
 result_df['Price'] = result_df['Price'].replace(',', '.', regex=True)
 result_df['Price'] = result_df['Price'].astype(float)
@@ -199,16 +201,17 @@ print(result_df)
 [296 rows x 8 columns]
 ```
 
-<br>
+<br><br>
 
-🟪 **Exportação de Dados**
+🟪 **Exportação de Dados** <br>
 
 ___Exportação dos dados para o formato CSV.___<br>
 ```
 result_df.to_csv('BASE_ECOMMERCE.csv', index=False)
 ```
+<br>
 
-🟪 **Análise de Dados**
+🟪 **Análise de Dados** <br>
 __Análise de dados com Power BI. Segue o link abaixo:___<br>
 https://app.powerbi.com/links/zy8qgNIGU3?ctid=437dbe8a-034a-4d15-ba99-3c71e2415611&pbi_source=linkShare
 
