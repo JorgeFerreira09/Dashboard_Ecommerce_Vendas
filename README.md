@@ -36,6 +36,7 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 
 
 ### IV. Tecnologias utilizadas
+
 ☑️ SQL <br>
 ☑️ Pandas <br>
 ☑️ Python <br>
@@ -47,7 +48,7 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 
 <br>
 
-🟪 **SQL: Análise Exploratória dos dados** <br>
+🟪 **Análise Exploratória dos dados com SQL** <br>
 
 ___1º Importação das bibliotecas sqlite3 e pandas e carregamento das duas bases de dados a partir de arquivos CSV.___<br>
 
@@ -156,7 +157,7 @@ print(result_df)
 
 <br>
 
-🟪 **Python: Limpeza de Dados** <br>
+🟪 **Limpeza de Dados com Python** <br>
 
 ___Limpeza com Pandas antes de exportar para o formato CSV.___<br>
 ```
@@ -214,7 +215,7 @@ result_df.to_csv('BASE_ECOMMERCE.csv', index=False)
 ```
 <br>
 
-🟪 **Power BI: Análise de Dados** <br>
+🟪 **Análise de Dados no Power BI** <br>
 
 ___Carregamento dos dados e análise com Power BI. Segue o link abaixo:___<br>
 https://app.powerbi.com/links/zy8qgNIGU3?ctid=437dbe8a-034a-4d15-ba99-3c71e2415611&pbi_source=linkShare
