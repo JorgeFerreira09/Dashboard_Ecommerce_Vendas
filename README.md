@@ -151,7 +151,7 @@ print(result_df)
 [296 rows x 9 columns]
 ```
 
-<br><br>
+<br>
 
 🟪 **Limpeza de Dados** <br>
 
@@ -201,7 +201,7 @@ print(result_df)
 [296 rows x 8 columns]
 ```
 
-<br><br>
+<br>
 
 🟪 **Exportação de Dados** <br>
 
@@ -212,6 +212,7 @@ result_df.to_csv('BASE_ECOMMERCE.csv', index=False)
 <br>
 
 🟪 **Análise de Dados** <br>
+
 __Análise de dados com Power BI. Segue o link abaixo:___<br>
 https://app.powerbi.com/links/zy8qgNIGU3?ctid=437dbe8a-034a-4d15-ba99-3c71e2415611&pbi_source=linkShare
 
