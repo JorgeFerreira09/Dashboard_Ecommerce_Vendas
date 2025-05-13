@@ -12,7 +12,7 @@ Estruturação do Projeto: <br>
 
 ### I. Objetivo  
      
-Analisar o desempenho de vendas de uma grande loja virtual por categoria de produto e perfil demográfico, considerando estado, gênero e profissão. </p>
+Analisar o desempenho de vendas de uma grande loja virtual fictícia por categoria de produto e perfil demográfico, considerando estado, gênero e profissão. </p>
    
 ### II. Apresentação Visual
   
