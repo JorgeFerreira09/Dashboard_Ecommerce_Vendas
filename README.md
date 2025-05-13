@@ -2,7 +2,7 @@
   <h1> Dashboard Analítico de Vendas no E-commerce   </h1>
 </div> <br>  
 
-Estruturação do Projeto: <br>
+## Estruturação do Projeto: <br>
 🟣 Objetivo <br>
 🟣 Apresentação visual <br>
 🟣 Insights para tomador de decisão<br>
@@ -10,11 +10,11 @@ Estruturação do Projeto: <br>
 🟣 Passo a passo <br><br>
 
 
-### I. Objetivo  
+## I. Objetivo  
 Analisar o desempenho de vendas de uma grande loja virtual por categoria de produto e perfil demográfico, considerando estado, gênero e profissão. <br><br>
 
 
-### II. Apresentação Visual
+## II. Apresentação Visual
   
   ![Captura de tela 2025-05-13 102812](https://github.com/user-attachments/assets/e9efd793-5cac-47b3-ba99-ce8a6db948f4) 
 
@@ -24,7 +24,7 @@ Analisar o desempenho de vendas de uma grande loja virtual por categoria de prod
 
 <br>
 
-### III. Insights para Tomador de Decisão 
+## III. Insights para Tomador de Decisão 
 
 <br>
 
@@ -35,7 +35,7 @@ ___✔️  As vendas estão concentradas no público feminino (45%) e masculino 
 ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilibrada entre os estados americanos e destaque para a Geórgia (GA), que representa 3x mais vendas que os demais. No entanto, __não houve nenhuma venda__ dessa categoria para os gêneros Genderfluid, Agender, Genderqueer e Non-binary. Isso indica falha na estratégia de inclusão da marca, seja na comunicação ou na falta de produtos "Beauty" destinados para esse público.___ <br><br>   
 
 
-### IV. Tecnologias utilizadas
+## IV. Tecnologias utilizadas
 
 ☑️ SQL <br>
 ☑️ Pandas <br>
@@ -44,7 +44,7 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 ☑️ Google Colab <br><br>
 
 
-### V. Passo a Passo
+## V. Passo a Passo
 
 <br>
 
@@ -217,7 +217,9 @@ result_df.to_csv('BASE_ECOMMERCE.csv', index=False)
 
 🟪 **Análise de Dados no Power BI** <br>
 
-___Carregamento dos dados e análise com Power BI. Segue o link abaixo:___<br>
+___Por último, carregamento dos dados e análise com Power BI.___<br><br>
+
+___👉 Clique no link abaixo para mexer no dashboard:___ <br>
 https://app.powerbi.com/links/zy8qgNIGU3?ctid=437dbe8a-034a-4d15-ba99-3c71e2415611&pbi_source=linkShare
 
 
