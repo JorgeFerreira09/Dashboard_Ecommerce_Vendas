@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> Dashboard E-commerce: Desempenho de Vendas </h1>
+  <h1> Dashboard de Loja Online - Análise de Vendas </h1>
 </div> <br>  
 
 Estruturação do Projeto: <br>
