@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> Dashboard de Loja Online - Análise de Vendas </h1>
+  <h1> Dashboard Analítico de Vendas no E-commerce   </h1>
 </div> <br>  
 
 Estruturação do Projeto: <br>
@@ -11,9 +11,9 @@ Estruturação do Projeto: <br>
 
 
 ### I. Objetivo  
-     
-Analisar o desempenho de vendas de uma grande loja virtual por categoria de produto e perfil demográfico, considerando estado, gênero e profissão. <br>
-   
+Analisar o desempenho de vendas de uma grande loja virtual por categoria de produto e perfil demográfico, considerando estado, gênero e profissão. <br><br>
+
+
 ### II. Apresentação Visual
   
   ![Captura de tela 2025-05-13 102812](https://github.com/user-attachments/assets/e9efd793-5cac-47b3-ba99-ce8a6db948f4) 
