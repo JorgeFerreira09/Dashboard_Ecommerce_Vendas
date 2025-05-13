@@ -47,7 +47,7 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 
 <br>
 
-🟪 **Análise Exploratória dos dados** <br>
+🟪 **SQL: Análise Exploratória dos dados** <br>
 
 ___1º Importação das bibliotecas sqlite3 e pandas e carregamento das duas bases de dados a partir de arquivos CSV.___<br>
 
@@ -68,13 +68,14 @@ def run_query(query):
 
 <br>
 
-___2º Conhecer a Tabela Transação com SQL, consulta de 5 linhas.___<br>
+___2º Conhecendo a Tabela Transação com SQL.___<br>
 
 ```
 query = "SELECT * FROM TB_TRANSACOES LIMIT 5"
 result_df = run_query(query)
 print(result_df)
 ```
+Resultado da consulta de 5 linhas:
 ```
    id_client     Category   Price   Card Type
 0         37  Electronics   72,93  mastercard
@@ -86,12 +87,14 @@ print(result_df)
 
 <br>
 
-___3º Conhecer a Tabela Clientes com SQL, consulta de 10 linhas.___ <br>
+___3º Conhecendo a Tabela Clientes com SQL.___ <br>
 ```
 query = "SELECT * FROM TB_CLIENTES LIMIT 10"
 result_df = run_query(query)
 print(result_df)
 ```
+Resultado da consulta de 10 linhas:
+
 ```
   state_name First_name  Gender                     Job_Title  Id_client
 0         TX    Domingo    Male  Structural Analysis Engineer          1
@@ -153,7 +156,7 @@ print(result_df)
 
 <br>
 
-🟪 **Limpeza de Dados** <br>
+🟪 **Python: Limpeza de Dados** <br>
 
 ___Limpeza com Pandas antes de exportar para o formato CSV.___<br>
 ```
@@ -211,9 +214,9 @@ result_df.to_csv('BASE_ECOMMERCE.csv', index=False)
 ```
 <br>
 
-🟪 **Análise de Dados** <br>
+🟪 **Power BI: Análise de Dados** <br>
 
-___Análise de dados com Power BI. Segue o link abaixo:___<br>
+___Carregamento dos dados e análise com Power BI. Segue o link abaixo:___<br>
 https://app.powerbi.com/links/zy8qgNIGU3?ctid=437dbe8a-034a-4d15-ba99-3c71e2415611&pbi_source=linkShare
 
 
