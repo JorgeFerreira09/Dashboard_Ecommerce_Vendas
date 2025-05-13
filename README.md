@@ -12,7 +12,7 @@ Estruturação do Projeto: <br>
 
 ### I. Objetivo  
      
-Analisar o desempenho de vendas de uma grande loja virtual por categoria de produto e perfil demográfico, considerando estado, gênero e profissão. </p>
+Analisar o desempenho de vendas de uma grande loja virtual por categoria de produto e perfil demográfico, considerando estado, gênero e profissão. <br>
    
 ### II. Apresentação Visual
   
@@ -86,7 +86,7 @@ print(result_df)
 
 <br>
 
-__3º Conhecer a Tabela Clientes com SQL, consulta de 10 linhas.___<br>
+___3º Conhecer a Tabela Clientes com SQL, consulta de 10 linhas.___ <br>
 ```
 query = "SELECT * FROM TB_CLIENTES LIMIT 10"
 result_df = run_query(query)
@@ -108,7 +108,7 @@ print(result_df)
 
 <br>
 
-__4º Uso do comando INNER JOIN do SQL para retornar apenas as linhas que têm correspondência em ambas as tabelas.___<br>
+___4º Uso do comando INNER JOIN do SQL para retornar apenas as linhas que têm correspondência em ambas as tabelas.___ <br>
 ```
 query = """
 SELECT
