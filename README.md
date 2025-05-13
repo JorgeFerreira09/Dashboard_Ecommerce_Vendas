@@ -45,7 +45,7 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 
 ### V. Passo a Passo
 
-1º) Importação das bibliotecas sqlite3 e panda, bem como duas bases de dados são carregadas a partir de arquivos CSV. 
+1º) Importação das bibliotecas sqlite3 e pandas e carregamento das duas bases de dados a partir de arquivos CSV. 
 
 ```
 import sqlite3
