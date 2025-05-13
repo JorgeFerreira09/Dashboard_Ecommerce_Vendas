@@ -40,12 +40,14 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 ☑️ Pandas <br>
 ☑️ Python <br>
 ☑️ Power BI <br>
-☑️ Google Colab <br>
+☑️ Google Colab <br><br>
 
 
 ### V. Passo a Passo
 
-1º) Importação das bibliotecas sqlite3 e pandas e carregamento das duas bases de dados a partir de arquivos CSV. 
+🟪 **Análise Exploratória dos dados**
+
+___1º) Importação das bibliotecas sqlite3 e pandas e carregamento das duas bases de dados a partir de arquivos CSV.___<br>
 
 ```
 import sqlite3
@@ -62,8 +64,10 @@ def run_query(query):
     return pd.read_sql_query(query, conn)
 ```
 
+<br>
 
-2º Conhecendo a Tabela Transação com SQL, apenas 5 linhas.
+___2º Conhecer a Tabela Transação com SQL, consulta de 5 linhas.___<br>
+
 ```
 query = "SELECT * FROM TB_TRANSACOES LIMIT 5"
 result_df = run_query(query)
@@ -78,9 +82,9 @@ print(result_df)
 4          5     Outdoors   61,95  mastercard
 ```
 
+<br>
 
-3º 
-Conhecendo a Tabela Clientes com SQL, apenas 10 linhas. 
+__3º Conhecer a Tabela Clientes com SQL, consulta de 10 linhas.___<br>
 ```
 query = "SELECT * FROM TB_CLIENTES LIMIT 10"
 result_df = run_query(query)
@@ -100,9 +104,9 @@ print(result_df)
 9         CA    Carmine  Female               Statistician II         10
 ```
 
+<br>
 
-4º 
-Uso do comando INNER JOIN do SQL para retornar apenas as linhas que têm correspondência em ambas as tabelas. 
+__4º Uso do comando INNER JOIN do SQL para retornar apenas as linhas que têm correspondência em ambas as tabelas.___<br>
 ```
 query = """
 SELECT
@@ -115,7 +119,6 @@ ORDER BY TB_TRANSACOES.Id_client
 result_df = run_query(query)
 print(result_df)
 ```
-
 ```
      id_client    Category   Price   Card Type state_name First_name   Gender  \
 0            1    Outdoors   16,97  mastercard         TX    Domingo     Male   
@@ -146,11 +149,11 @@ print(result_df)
 [296 rows x 9 columns]
 ```
 
+<br>
 
-5º) **Limpeza de Dados**
-Realização de limpeza de dados com Pandas, antes de exportar para o formato CSV e trabalhar no Power BI.
+🟪 **Limpeza de Dados** 
 
-
+___Realização da limpeza de dados com Pandas, antes de exportar para o formato CSV.___<br>
 ```
 result_df['Price'] = result_df['Price'].replace(',', '.', regex=True)
 result_df['Price'] = result_df['Price'].astype(float)
@@ -196,14 +199,17 @@ print(result_df)
 [296 rows x 8 columns]
 ```
 
-6º)
-Exportar os dados para o formato CSV com objetivo de trabalhar no Power BI
+<br>
 
+🟪 **Exportação de Dados**
+
+___Exportação dos dados para o formato CSV.___<br>
 ```
 result_df.to_csv('BASE_ECOMMERCE.csv', index=False)
 ```
 
+🟪 **Análise de Dados**
+__Análise de dados com Power BI. Segue o link abaixo:___<br>
+https://app.powerbi.com/links/zy8qgNIGU3?ctid=437dbe8a-034a-4d15-ba99-3c71e2415611&pbi_source=linkShare
 
-```
-```
 
