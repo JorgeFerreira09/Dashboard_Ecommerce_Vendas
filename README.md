@@ -15,7 +15,7 @@ Analisar o desempenho de vendas de uma grande loja virtual por categoria de prod
 
 
 ## II. Apresentação Visual
-  
+ 
   ![Captura de tela 2025-05-13 102812](https://github.com/user-attachments/assets/e9efd793-5cac-47b3-ba99-ce8a6db948f4) 
 
   ![Captura de tela 2025-05-13 103842](https://github.com/user-attachments/assets/055641dd-aa7a-42ff-b9d4-4ba4b511e8f4)
@@ -48,10 +48,17 @@ ___✔️  A categoria “Beauty” lidera as vendas, com distribuição equilib
 
 <br>
 
-🟪 **Análise Exploratória dos dados com SQL** <br>
+___Todos os registros de compras da loja virtual estavam armazenados em dois arquivos CSV.___<br>
 
-___1º Importação das bibliotecas sqlite3 e pandas e carregamento das duas bases de dados a partir de arquivos CSV.___<br>
+___Inicialização do Google Colab, onde será desenvolvido todo o código do projeto.___<br>
 
+<br>
+
+🟪 **Análise Exploratória dos dados com SQL** 
+
+<br>
+
+___1º Importação das bibliotecas sqlite3 e pandas e carregamento das duas bases de dados de formato CSV.___<br>
 ```
 import sqlite3
 import pandas as pd
@@ -125,6 +132,8 @@ ORDER BY TB_TRANSACOES.Id_client
 result_df = run_query(query)
 print(result_df)
 ```
+Resultado do comando INNER JOIN do SQL:
+
 ```
      id_client    Category   Price   Card Type state_name First_name   Gender  \
 0            1    Outdoors   16,97  mastercard         TX    Domingo     Male   
